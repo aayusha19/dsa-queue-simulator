@@ -1,4 +1,4 @@
-// TrafficLight.h
+
 #pragma once
 #include <SDL3/SDL.h>
 #include "Constants.h"
@@ -14,7 +14,7 @@ private:
     bool isTransitioning;
 
 public:
-    TrafficLight();  // Just declare the constructor here
+    TrafficLight();  
     void update(float deltaTime);
     void setState(LightState newState);
     LightState getState() const;

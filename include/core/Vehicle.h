@@ -1,4 +1,4 @@
-// include/core/Vehicle.hpp
+
 #pragma once
 #include "Constants.h"
 #include <cstdint>
