@@ -42,6 +42,6 @@ private:
 
 public:
     Generator();
-    void generateTraffic();
-    void displayStatus() const;
+    void generateTraffic();  //generates the traffic
+    void displayStatus() const; //displays the status 
 };
