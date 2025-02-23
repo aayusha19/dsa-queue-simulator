@@ -105,15 +105,15 @@ C:/Program Files/CMake/share/cmake-3.31/Modules/Platform/Windows-MSVC-CXX.cmake
 C:/Program Files/CMake/share/cmake-3.31/Modules/Platform/Windows-MSVC.cmake
 C:/Program Files/CMake/share/cmake-3.31/Modules/Platform/Windows.cmake
 C:/Program Files/CMake/share/cmake-3.31/Modules/Platform/WindowsPaths.cmake
-C:/Users/ACER/Projects/dsa/CMakeLists.txt
-C:/Users/ACER/Projects/dsa/build/CMakeFiles/3.31.5/CMakeCCompiler.cmake
-C:/Users/ACER/Projects/dsa/build/CMakeFiles/3.31.5/CMakeCXXCompiler.cmake
-C:/Users/ACER/Projects/dsa/build/CMakeFiles/3.31.5/CMakeRCCompiler.cmake
-C:/Users/ACER/Projects/dsa/build/CMakeFiles/3.31.5/CMakeSystem.cmake
-C:/Users/ACER/Projects/dsa/libs/SDL3_install/cmake/SDL3Config.cmake
-C:/Users/ACER/Projects/dsa/libs/SDL3_install/cmake/SDL3ConfigVersion.cmake
-C:/Users/ACER/Projects/dsa/libs/SDL3_install/cmake/SDL3headersTargets.cmake
-C:/Users/ACER/Projects/dsa/libs/SDL3_install/cmake/SDL3sharedTargets-release.cmake
-C:/Users/ACER/Projects/dsa/libs/SDL3_install/cmake/SDL3sharedTargets.cmake
-C:/Users/ACER/Projects/dsa/libs/SDL3_install/cmake/SDL3testTargets-release.cmake
-C:/Users/ACER/Projects/dsa/libs/SDL3_install/cmake/SDL3testTargets.cmake
+D:/coding/DSA/dsa/CMakeLists.txt
+D:/coding/DSA/dsa/build/CMakeFiles/3.31.5/CMakeCCompiler.cmake
+D:/coding/DSA/dsa/build/CMakeFiles/3.31.5/CMakeCXXCompiler.cmake
+D:/coding/DSA/dsa/build/CMakeFiles/3.31.5/CMakeRCCompiler.cmake
+D:/coding/DSA/dsa/build/CMakeFiles/3.31.5/CMakeSystem.cmake
+D:/coding/DSA/dsa/libs/SDL3_install/cmake/SDL3Config.cmake
+D:/coding/DSA/dsa/libs/SDL3_install/cmake/SDL3ConfigVersion.cmake
+D:/coding/DSA/dsa/libs/SDL3_install/cmake/SDL3headersTargets.cmake
+D:/coding/DSA/dsa/libs/SDL3_install/cmake/SDL3sharedTargets-release.cmake
+D:/coding/DSA/dsa/libs/SDL3_install/cmake/SDL3sharedTargets.cmake
+D:/coding/DSA/dsa/libs/SDL3_install/cmake/SDL3testTargets-release.cmake
+D:/coding/DSA/dsa/libs/SDL3_install/cmake/SDL3testTargets.cmake
