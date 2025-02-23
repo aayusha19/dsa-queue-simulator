@@ -1,0 +1,3 @@
+C:/Users/ACER/Projects/dsa/build/CMakeFiles/YourProjectName.dir
+C:/Users/ACER/Projects/dsa/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/ACER/Projects/dsa/build/CMakeFiles/ZERO_CHECK.dir
