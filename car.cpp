@@ -19,7 +19,16 @@ public:
         std::cout << "Small Car ID: " << carID 
                   << ", Arrival Time: " << arrivalTime << " sec\n";
     }
+
+    private:
+    int speed; // in km/h
+public:
+    SmallCar(int id, int time, int spd) : carID(id), arrivalTime(time), speed(spd) {}
+
+    int getSpeed() const { return speed; }
+
 };
+
 
 int main() {
     std::queue<SmallCar> carQueue;
