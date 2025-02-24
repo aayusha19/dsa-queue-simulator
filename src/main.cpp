@@ -95,5 +95,5 @@ int main(int argc, char* argv[]) {
     simulator.run();
     simulator.cleanup();
 
-    return 0;
+    return 1;
 }
