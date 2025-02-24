@@ -86,7 +86,7 @@ int main(int argc, char* argv[]) {
 
     if (!simulator.initialize()) {
         std::cerr << "Failed to initialize simulator" << std::endl;
-        return 0;
+        return 1;
     }
 
     std::cout << "Traffic Simulator Started\n";
