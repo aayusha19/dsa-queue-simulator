@@ -15,8 +15,8 @@ private:
     float vehicleProcessTime;
 
     // Helper methods
-    void updateLanePriorities();
-    float calculateAverageWaitingVehicles() const;
+    void updateLanePriority();
+    float calcAvgWaitingVehicles() const;
     void processVehicles(size_t count);
     void handlePriorityLane();
 

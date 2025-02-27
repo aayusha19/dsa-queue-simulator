@@ -17,7 +17,7 @@ Lane::Lane(LaneId id, bool isPriority)
 }
 
 
-Direction Lane::getVehicleDirection(size_t index) const {
+Direction Lane::getVehiclesDirection(size_t index) const {
     if (index >= vehicleQueue.getSize()) {
         return Direction::STRAIGHT;  // Default direction
     }

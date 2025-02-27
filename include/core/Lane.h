@@ -17,7 +17,7 @@ public:
 
     void addVehicle(std::shared_ptr<Vehicle> vehicle);
     std::shared_ptr<Vehicle> removeVehicle();
-    Direction getVehicleDirection(size_t index) const;  // Add this method
+    Direction getVehiclesDirection(size_t index) const;  // Add this method
     size_t getQueueSize() const;
     bool isPriorityLane() const;
     LaneId getId() const;

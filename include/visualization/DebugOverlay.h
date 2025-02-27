@@ -15,7 +15,7 @@ private:
     };
 
     std::map<LaneId, LaneStatistics> stats;
-    void updateStatistics(const TrafficManager& trafficManager);
+    void updateStats(const TrafficManager& trafficManager);
     void renderQueueStats(SDL_Renderer* renderer, int x, int y);
     void renderLaneLoadIndicator(SDL_Renderer* renderer, int x, int y);
     void renderSystemStatus(SDL_Renderer* renderer, int x, int y);

@@ -215,7 +215,7 @@ void TrafficManager::updateVehiclePositions(float deltaTime) {
             ++it;
         } else {
             // Update queue position for waiting vehicles
-            updateVehicleQueuePosition(
+            updateQueuePosition(
                 state,
                 state.vehicle->getCurrentLane(),
                 getLaneSize(state.vehicle->getCurrentLane())
@@ -225,7 +225,7 @@ void TrafficManager::updateVehiclePositions(float deltaTime) {
     }
 }
 
-void TrafficManager::updateVehicleQueuePosition(VehicleState& state, LaneId laneId,
+void TrafficManager::updateQueuePosition(VehicleState& state, LaneId laneId,
                                               size_t queuePosition) {
     using namespace SimConstants;
 

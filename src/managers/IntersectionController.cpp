@@ -24,7 +24,7 @@ void IntersectionController::update(float deltaTime) {
     stateTimer += deltaTime;
 
     // Update lane priorities based on waiting vehicles
-    updateLanePriorities();
+    updateLanePriority();
 
     // Check priority conditions
     auto priorityLane = std::find_if(lanes.begin(), lanes.end(),
@@ -38,7 +38,7 @@ void IntersectionController::update(float deltaTime) {
     } else {
         isPriorityMode = false;
         if (stateTimer >= vehicleProcessTime) {
-            float avgVehicles = calculateAverageWaitingVehicles();
+            float avgVehicles = calcAvgWaitingVehicles();
             processVehicles(static_cast<size_t>(std::ceil(avgVehicles)));
             stateTimer = 0.0f;
         }
@@ -57,7 +57,7 @@ void IntersectionController::update(float deltaTime) {
     }
 }
 
-void IntersectionController::updateLanePriorities() {
+void IntersectionController::updateLanePriority() {
     // Clear and update lane queue
     while (!laneQueue.isEmpty()) {
         laneQueue.dequeue();
@@ -82,7 +82,7 @@ void IntersectionController::updateLanePriorities() {
     }
 }
 
-float IntersectionController::calculateAverageWaitingVehicles() const {
+float IntersectionController::calcAvgWaitingVehicles() const {
     size_t totalVehicles = 0;
     size_t normalLaneCount = 0;
 

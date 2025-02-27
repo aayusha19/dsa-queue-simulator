@@ -43,7 +43,7 @@ void DebugOverlay::render(SDL_Renderer* renderer, const TrafficManager& trafficM
     }
 }
 
-void DebugOverlay::updateStatistics(const TrafficManager& trafficManager) {
+void DebugOverlay::updateStats(const TrafficManager& trafficManager) {
     for (const auto& lane : trafficManager.getLanes()) {
         LaneStatistics& laneStat = stats[lane->getId()];
         laneStat.vehicleCount = static_cast<int>(lane->getQueueSize());

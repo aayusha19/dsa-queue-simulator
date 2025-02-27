@@ -33,7 +33,7 @@ private:
 
     // Vehicle processing methods
     void updateVehiclePositions(float deltaTime);
-    void updateVehicleQueuePosition(VehicleState& state, LaneId laneId, size_t queuePosition);
+    void updateQueuePosition(VehicleState& state, LaneId laneId, size_t queuePosition);
     void calculateTargetPosition(VehicleState& state, LaneId laneId);
     bool checkCollision(const VehicleState& state, float newX, float newY) const;
     float calculateTurningRadius(Direction dir) const;
