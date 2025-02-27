@@ -1,4 +1,4 @@
-// traffic_generator/include/Generator.h
+
 #pragma once
 #include <string>
 #include <random>
@@ -22,9 +22,9 @@ private:
     std::filesystem::path dataDir;
     std::chrono::steady_clock::time_point lastGenTime;
 
-    std::mutex fileMutex;  // Add mutex member
+    std::mutex fileMutex;  
 
-    // Generation settings
+    
     struct LaneSettings {
         double spawnProbability;
         int maxVehicles;
@@ -32,16 +32,16 @@ private:
     };
     std::map<LaneId, LaneSettings> laneSettings;
 
-    // Private methods
+    
     Direction generateRandomDirection();
     void writeVehicleToFile(const std::filesystem::path& filepath, uint32_t id, Direction dir);
-    size_t countVehiclesInFile(const std::filesystem::path& filepath) const;  // Made const
+    size_t countVehiclesInFile(const std::filesystem::path& filepath) const;  
     void initializeLaneSettings();
     bool shouldGenerateVehicle(LaneId laneId, size_t currentCount);
     void clearAllFiles();
 
 public:
     Generator();
-    void generateTraffic();  //generates the traffic
-    void displayStatus() const; //displays the status 
+    void generateTraffic();  
+    void displayStatus() const; 
 };
