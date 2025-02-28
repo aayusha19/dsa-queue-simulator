@@ -22,5 +22,3 @@ enum class LightState {
     RED,
     GREEN
 };
-
-;

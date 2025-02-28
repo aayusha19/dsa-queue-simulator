@@ -67,4 +67,4 @@ private:
     void drawPanelChar(SDL_Renderer* renderer, char c, int x, int y);
 };
 
-#endif // TRAFFIC_LIGHT_H
+#endif 

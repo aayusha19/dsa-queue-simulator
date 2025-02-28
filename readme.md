@@ -6,7 +6,7 @@ This project is part of a DSA assignment to implement queue-based traffic manage
 It simulates traffic movement at a four-way junction, managing vehicles with normal and priority queues.
 The traffic generator program creates vehicles, and the simulator processes them based on queue rules.
 
-
+![](trafficsimulator.gif)
 
 Features:
 1. Real-time traffic simulation
