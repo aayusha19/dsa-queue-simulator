@@ -1,4 +1,4 @@
-// FILE: include/utils/Queue.h
+
 #ifndef QUEUE_H
 #define QUEUE_H
 
@@ -82,9 +82,9 @@ public:
         return false;
     }
 
-    // Get all elements for iteration (e.g., for rendering)
+    // Get all elements for iteration
     const std::vector<T>& getAllElements() const {
-        // Note: This returns a const reference, so caller must not modify the vector
+        // This returns a const reference, so caller must not modify the vector
         // This avoids copying the entire vector while still providing access for iteration
         return elements;
     }
@@ -94,4 +94,4 @@ private:
     mutable std::mutex mutex;
 };
 
-#endif // QUEUE_Hendif // QUEUE_Hendif // QUEUE_H
+#endif 

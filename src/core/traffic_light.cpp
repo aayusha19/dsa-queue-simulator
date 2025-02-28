@@ -1,4 +1,4 @@
-// FILE: src/core/TrafficLight.cpp
+
 #include "core/traffic_light.h"
 #include "utils/debuglogger.h"
 #include <sstream>
@@ -122,7 +122,7 @@ void TrafficLight::update(const std::vector<Lane*>& lanes) {
         stateDuration = allRedDuration; // 2 seconds for ALL_RED
     } else {
         // Calculate average using lane counts
-        float averageVehicleCount = calculateAverageVehicleCount(lanes);
+        float averageVehicleCount = calcAvgVehicleCount(lanes);
 
         // Set duration using formula: Total time = |V| * t (2 seconds per vehicle)
         stateDuration = static_cast<int>(averageVehicleCount * 2000);
@@ -174,7 +174,7 @@ void TrafficLight::update(const std::vector<Lane*>& lanes) {
     }
 }
 
-float TrafficLight::calculateAverageVehicleCount(const std::vector<Lane*>& lanes) {
+float TrafficLight::calcAvgVehicleCount(const std::vector<Lane*>& lanes) {
     int normalLaneCount = 0;
     int totalVehicleCount = 0;
 

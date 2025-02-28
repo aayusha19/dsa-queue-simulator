@@ -1,4 +1,4 @@
-// FILE: include/c// FILE: include/core/Vehicle.h
+
 #ifndef VEHICLE_H
 #define VEHICLE_H
 
@@ -7,9 +7,9 @@
 #include <ctime>
 #include <vector>
 #include <sstream>
-#include "utils/DebugLogger.h"
+#include "utils/debuglogger.h"
 
-// Define all enums here instead of just forward declaring them
+// Define all enums here 
 enum class Destination {
     STRAIGHT,
     LEFT,

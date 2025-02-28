@@ -56,7 +56,7 @@ private:
     uint32_t priorityModeStartTime;
 
     // Helper function to calculate average vehicle count
-    float calculateAverageVehicleCount(const std::vector<Lane*>& lanes);
+    float calcAvgVehicleCount(const std::vector<Lane*>& lanes);
 
     // Modern UI drawing functions
     void drawTrafficControlCenter(SDL_Renderer* renderer);

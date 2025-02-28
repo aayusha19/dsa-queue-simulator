@@ -1,4 +1,4 @@
-// FILE: include/core/Constants.h
+
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
 
@@ -28,8 +28,8 @@ namespace Constants {
     constexpr float MOVE_SPEED = 0.2f;
 
     // Traffic light settings
-    constexpr int ALL_RED_DURATION = 2000; // 2 seconds
-    constexpr int GREEN_DURATION_BASE = 3000;   // 3 seconds
+    constexpr int ALL_RED_DURATION = 2000; // 2 secs
+    constexpr int GREEN_DURATION_BASE = 3000;   // 3 secs
 
     // Queue settings
     constexpr int MAX_QUEUE_SIZE = 100;

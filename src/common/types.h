@@ -1,4 +1,4 @@
-// src/common/types.h
+
 #pragma once
 #include <cstdint>
 #include <string>
@@ -18,7 +18,7 @@ enum class LaneId {
     DL3_FREELANE
 };
 
-enum class LightState {
+enum class LightState { 
     RED,
     GREEN
 };

@@ -1,10 +1,10 @@
-// FILE: src/core/Vehicle.cpp
+
 #include "core/vehicle.h"
 #include "core/constants.h"
 #include "utils/debuglogger.h"
 #include <cmath>
 #include <sstream>
-#include <random> // Add this for random number generation
+#include <random> // for random number generation
 
 Vehicle::Vehicle(const std::string& id, char lane, int laneNumber, bool isEmergency)
     : id(id),

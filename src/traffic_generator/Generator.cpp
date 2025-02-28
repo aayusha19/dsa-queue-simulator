@@ -1,4 +1,4 @@
-// F// FILE: src/traffic_generator.cpp
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -14,7 +14,6 @@
 #include <csignal>
 #include <map>
 
-// Include Windows-specific headers if on Windows
 #ifdef _WIN32
 #include <windows.h>
 #endif
@@ -22,7 +21,7 @@
 // Namespaces
 namespace fs = std::filesystem;
 
-// Constants for the generator - MODIFIED VALUES HERE
+// Constants for the generator
 const std::string DATA_DIR = "data/lanes";
 const int GENERATION_INTERVAL_MS = 2000;  // Increased from 800ms to 2000ms
 const int MAX_VEHICLES_PER_BATCH = 30;    // Reduced from 50 to 30

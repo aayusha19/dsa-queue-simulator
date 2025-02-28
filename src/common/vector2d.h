@@ -1,4 +1,4 @@
-// src/utils/vector2d.h
+
 #pragma once
 
 struct Vector2D {

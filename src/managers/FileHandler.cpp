@@ -1,4 +1,4 @@
-// FILE: src/managers/FileHandler.cpp
+
 #include "managers/FileHandler.h"
 #include "utils/debuglogger.h"
 #include <fstream>

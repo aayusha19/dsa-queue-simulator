@@ -11,14 +11,14 @@
 #include <random>
 #include <cmath>
 
-// Include the necessary headers
-#include "core/Vehicle.h"
-#include "core/Lane.h"
+//  necessary headers
+#include "core/vehicle.h"
+#include "core/lane.h"
 #include "core/traffic_light.h"
 #include "managers/TrafficManager.h"
 #include "managers/FileHandler.h"
-#include "visualization/Renderer.h"
-#include "utils/DebugLogger.h"
+#include "visualization/renderer.h"
+#include "utils/debuglogger.h"
 
 namespace fs = std::filesystem;
 

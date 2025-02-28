@@ -1,4 +1,4 @@
-// FILE: src/core/Lane.cpp
+
 #include "core/lane.h"
 #include "utils/debuglogger.h"
 #include <sstream>

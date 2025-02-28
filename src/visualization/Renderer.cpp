@@ -1,17 +1,19 @@
-// FILE: src/visualization/Renderer.cpp
-#include "visualization/Renderer.h"
-#include "core/Lane.h"
-#include "core/Vehicle.h"
+
+#include "visualization/renderer.h"
+#include "core/lane.h"
+#include "core/vehicle.h"
 #include "core/traffic_light.h"
 #include "managers/TrafficManager.h"
-#include "utils/DebugLogger.h"
-#include "core/Constants.h"
+#include "utils/debuglogger.h"
+#include "core/constants.h"
 
 #include <sstream>
 #include <algorithm>
 #include <cmath>
 #include <random>
 #include <chrono>
+#define M_PI       3.14159265358979323846   // pi
+
 
 Renderer::Renderer()
     : window(nullptr),

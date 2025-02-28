@@ -1,4 +1,4 @@
-// F// FILE: include/visualization/Renderer.h
+
 #ifndef RENDERER_H
 #define RENDERER_H
 
@@ -8,7 +8,7 @@
 #include <memory>
 #include <random>
 #include <cmath>
-#include "core/Vehicle.h" // For Direction enum
+#include "core/vehicle.h" // For Direction enum
 
 class Lane;
 class TrafficLight;
@@ -105,4 +105,4 @@ private:
     void drawDirectionArrow(int x, int y, Direction dir, SDL_Color color);
 };
 
-#endif // RENDERER_Hf // RENDERER_Hendif // RENDERER_Hendif // RENDERER_Hendif // RENDERER_Hendif // RENDERER_H
+#endif 
