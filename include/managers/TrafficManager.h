@@ -10,7 +10,7 @@
 #include <SDL3/SDL.h>
 
 #include "core/Lane.h"
-#include "core/TrafficLight.h"
+#include "core/traffic_light.h"
 #include "managers/FileHandler.h"
 #include "utils/PriorityQueue.h"
 

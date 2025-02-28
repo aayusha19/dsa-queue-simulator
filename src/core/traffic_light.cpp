@@ -5,6 +5,7 @@
 #include <cmath>
 #include <SDL3/SDL.h>
 #include "core/constants.h"
+#define M_PI       3.14159265358979323846   // pi
 
 TrafficLight::TrafficLight()
     : currentState(State::ALL_RED),

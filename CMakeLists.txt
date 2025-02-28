@@ -23,9 +23,9 @@ include_directories(
 
 # Define core source files
 set(CORE_SOURCES
-    src/core/Vehicle.cpp
-    src/core/Lane.cpp
-    src/core/TrafficLight.cpp
+    src/core/vehicle.cpp
+    src/core/lane.cpp
+    src/core/traffic_light.cpp
 )
 
 # Define manager source files
@@ -36,18 +36,18 @@ set(MANAGER_SOURCES
 
 # Define visualization source files
 set(VISUALIZATION_SOURCES
-    src/visualization/Renderer.cpp
+    src/visualization/renderer.cpp
 )
 
 # Define utility source files
 set(UTILITY_SOURCES
-    src/utils/DebugLogger.cpp
+    src/utils/debuglogger.cpp
     # These are header-only, no implementation files
 )
 
 # Define simulator sources
 set(SIMULATOR_SOURCES
-    src/main.cpp
+    src/traffic_generator/main.cpp
     ${CORE_SOURCES}
     ${MANAGER_SOURCES}
     ${VISUALIZATION_SOURCES}
@@ -56,7 +56,7 @@ set(SIMULATOR_SOURCES
 
 # Define traffic generator sources
 set(GENERATOR_SOURCES
-    src/traffic_generator.cpp
+    src/traffic_generator/generator.cpp
 )
 
 # Add executables
