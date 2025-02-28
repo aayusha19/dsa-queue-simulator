@@ -1,62 +1,44 @@
+// FILE: include/managers/FileHandler.h
+#ifndef FILE_HANDLER_H
+#define FILE_HANDLER_H
 
-#pragma once
-#include "core/Vehicle.h"
-#include <memory>
-#include <vector>
 #include <string>
-#include <map>
-#include <filesystem>
-#include <fstream>
-#include <iostream>
+#include <vector>
+#include <mutex>
+#include "core/Vehicle.h"
 
 class FileHandler {
-private:
-
-
-
-    static constexpr int WINDOW_WIDTH = 1024;
-    static constexpr int WINDOW_HEIGHT = 768;
-    static constexpr int ROAD_WIDTH = 270;     // Width for 3 lanes (90 * 3)
-    static constexpr int LANE_WIDTH = 90;      // Individual lane width
-    static constexpr int CENTER_X = WINDOW_WIDTH / 2;
-    static constexpr int CENTER_Y = WINDOW_HEIGHT / 2;
-    static constexpr float QUEUE_SPACING = 40.0f;
-    static constexpr float QUEUE_START_OFFSET = 250.0f;
-
-
-
-    static const std::string BASE_PATH;
-
-
-void ensureDataDirectoryExists() {
-    const auto dataPath = std::filesystem::current_path() / "data" / "lanes";
-    std::filesystem::create_directories(dataPath);
-    std::cout << "Data directory ensured at: " << dataPath << std::endl;
-}
-
-// Add this to FileHandler class header
-void debugPrintFileContents(const std::filesystem::path& filepath) {
-    std::ifstream file(filepath);
-    if (!file) {
-        std::cerr << "Could not open file for debug: " << filepath << std::endl;
-        return;
-    }
-
-    std::string line;
-    while (std::getline(file, line)) {
-        std::cout << "File content: " << line << std::endl;
-    }
-}
-    std::map<LaneId, std::filesystem::path> laneFiles;
-    std::map<std::filesystem::path, int64_t> lastReadPositions;
-    std::filesystem::path dataDir;
-
 public:
-    FileHandler();  // Declaration only, definition will be in cpp file
+    FileHandler(const std::string& dataPath = "data/lanes");
+    ~FileHandler();
 
-    std::vector<std::pair<LaneId, std::shared_ptr<Vehicle>>> readNewVehicles();
-    void clearLaneFiles();
+    // Read vehicles from lane files
+    std::vector<Vehicle*> readVehiclesFromFiles();
+
+    // Write lane status to file (for debugging/monitoring)
+    void writeLaneStatus(char laneId, int laneNumber, int vehicleCount, bool isPriority);
+
+    // Check if files exist/are readable
+    bool checkFilesExist();
+
+    // Create directories and empty files if they don't exist
+    bool initializeFiles();
 
 private:
-    std::vector<std::shared_ptr<Vehicle>> parseVehicleData(const std::string& data, LaneId laneId);
+    std::string dataPath;
+    std::mutex mutex;
+
+    // Lane file paths
+    std::string getLaneFilePath(char laneId) const;
+
+    // Read vehicles from a specific lane file
+    std::vector<Vehicle*> readVehiclesFromFile(char laneId);
+
+    // Parse a vehicle line from the file
+    Vehicle* parseVehicleLine(const std::string& line);
+
+    // Get the lane status file path
+    std::string getLaneStatusFilePath() const;
 };
+
+#endif // FILE_HANDLER_Hendif // FILE_HANDLER_H

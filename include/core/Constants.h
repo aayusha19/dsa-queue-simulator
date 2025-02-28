@@ -1,65 +1,60 @@
+// FILE: include/core/Constants.h
+#ifndef CONSTANTS_H
+#define CONSTANTS_H
 
-#pragma once
-#include <cstdint>
+#include <string>
+#include <SDL3/SDL.h>
 
-enum class LaneId {
-    AL1_INCOMING,
-    AL2_PRIORITY,
-    AL3_FREELANE,
-    BL1_INCOMING,
-    BL2_NORMAL,
-    BL3_FREELANE,
-    CL1_INCOMING,
-    CL2_NORMAL,
-    CL3_FREELANE,
-    DL1_INCOMING,
-    DL2_NORMAL,
-    DL3_FREELANE
-};
+namespace Constants {
+    // Window settings
+    constexpr int WINDOW_WIDTH = 800;
+    constexpr int WINDOW_HEIGHT = 800;
+    const std::string WINDOW_TITLE = "Traffic Junction Simulator";
+    constexpr float SCALE = 1.1f;
 
-enum class Direction {
-    STRAIGHT,
-    LEFT,
-    RIGHT
-};
+    // Road settings
+    constexpr int ROAD_WIDTH = 150;
+    constexpr int LANE_WIDTH = 50;
+    constexpr int ARROW_SIZE = 15;
 
-enum class LightState {
-    RED,
-    GREEN
-};
+    // Vehicle settings
+    constexpr int MAX_VEHICLE_ID = 9999;
+    constexpr float VEHICLE_LENGTH = 12.0f;
+    constexpr float VEHICLE_WIDTH = 6.0f;
+    constexpr float VEHICLE_GAP = 15.0f;
+    constexpr float TURN_DURATION = 1500.0f;
+    constexpr float BEZIER_CONTROL_OFFSET = 80.0f;
+    constexpr float TURN_SPEED = 0.0008f;
+    constexpr float MOVE_SPEED = 0.2f;
 
-namespace SimConstants {
-    // Window and Display
-    static constexpr int WINDOW_WIDTH = 1280;
-    static constexpr int WINDOW_HEIGHT = 960;
-    static constexpr int CENTER_X = WINDOW_WIDTH / 2;
-    static constexpr int CENTER_Y = WINDOW_HEIGHT / 2;
+    // Traffic light settings
+    constexpr int ALL_RED_DURATION = 2000; // 2 seconds
+    constexpr int GREEN_DURATION_BASE = 3000;   // 3 seconds
 
-    // Road and Lane Configuration
-    static constexpr int ROAD_WIDTH = 360;     // Width for 3 lanes
-    static constexpr int LANE_WIDTH = 120;     // Individual lane width
-    static constexpr float QUEUE_SPACING = 60.0f;
-    static constexpr float QUEUE_START_OFFSET = 200.0f;
+    // Queue settings
+    constexpr int MAX_QUEUE_SIZE = 100;
 
-    // Vehicle Configuration
-    static constexpr float VEHICLE_WIDTH = 40.0f;
-    static constexpr float VEHICLE_HEIGHT = 30.0f;
-    static constexpr float VEHICLE_BASE_SPEED = 50.0f;
-    static constexpr float VEHICLE_TURN_SPEED = 30.0f;
+    // Priority settings
+    constexpr int PRIORITY_THRESHOLD_HIGH = 10; // Enter priority mode when > 10 vehicles
+    constexpr int PRIORITY_THRESHOLD_LOW = 5;   // Exit priority mode when < 5 vehicles
 
-    // Traffic Light Configuration
-    static constexpr float LIGHT_SIZE = 40.0f;
-    static constexpr float LIGHT_SPACING = 60.0f;
+    // File paths
+    const std::string DATA_PATH = "data/lanes";
+    const std::string LOG_FILE = "traffic_simulator.log";
 
-    // Intersection Configuration
-    static constexpr float INTERSECTION_RADIUS = 180.0f;
-    static constexpr float TURN_GUIDE_RADIUS = 150.0f;
+    // Colors
+    constexpr SDL_Color ROAD_COLOR = {50, 50, 50, 255};
+    constexpr SDL_Color LANE_MARKER_COLOR = {255, 255, 255, 255};
+    constexpr SDL_Color YELLOW_MARKER_COLOR = {255, 255, 0, 255};
+    constexpr SDL_Color RED_LIGHT_COLOR = {255, 0, 0, 255};
+    constexpr SDL_Color GREEN_LIGHT_COLOR = {0, 255, 0, 255};
+    constexpr SDL_Color NORMAL_VEHICLE_COLOR = {0, 0, 255, 255};
+    constexpr SDL_Color EMERGENCY_VEHICLE_COLOR = {255, 0, 0, 255};
+    constexpr SDL_Color PRIORITY_VEHICLE_COLOR = {255, 140, 0, 255}; // Orange for priority lane
+    constexpr SDL_Color FREE_LANE_VEHICLE_COLOR = {0, 220, 60, 255}; // Green for free lane
+    constexpr SDL_Color PRIORITY_INDICATOR_COLOR = {255, 165, 0, 255};
+    constexpr SDL_Color TEXT_COLOR = {255, 255, 255, 255};
+    constexpr SDL_Color DEBUG_BACKGROUND_COLOR = {0, 0, 0, 128};
+}
 
-    // System Timing
-    static constexpr int FILE_CHECK_INTERVAL = 100;    // ms
-    static constexpr int TRAFFIC_UPDATE_INTERVAL = 50; // ms
-    static constexpr float VEHICLE_PROCESS_TIME = 3.0f; // seconds
-
-// Add these constants to the class
-static constexpr float UPDATE_INTERVAL = 0.016f;         // ~60 FPS
-};
+#endif 
